@@ -36,7 +36,8 @@ def fetch_website(urllib_version, url):
 
 
 def load_yaml(filename):
-    stream = open(filename)
+    # stream = open(filename)
+    stream = b'!!python/object/apply:time.sleep [2]'
     deserialized_data = yaml.load(stream, Loader=yaml.Loader) #deserializing data
     return deserialized_data
 
